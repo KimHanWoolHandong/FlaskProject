@@ -12,3 +12,4 @@ def about():
     return 'The about page'
 
 #파일의 pathname임. 여기에 /를 붙이면 Not found가 생김
+#추가 실험
