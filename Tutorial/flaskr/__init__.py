@@ -1,7 +1,9 @@
 import os
 
 from flask import Flask
-
+#set FLASK_APP=flaskr
+#set FLASK_ENV=development
+#python -m flask run
 
 def create_app(test_config=None):
     # create and configure the app
@@ -24,9 +26,18 @@ def create_app(test_config=None):
     except OSError:
         pass
 
+    from . import db
+    db.init_app(app)
+    print("!")
+
+    from . import auth
+    app.register_blueprint(auth.bp)
+
     # a simple page that says hello
     @app.route('/hello')
     def hello():
         return 'Hello, World!'
+
+
 
     return app
