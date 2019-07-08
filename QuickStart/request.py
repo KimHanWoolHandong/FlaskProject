@@ -14,6 +14,6 @@ def login():
             error = 'Invalid username/password'
     # the code below is executed if the request method
     # was GET or the credentials were invalid
-    return render_template('hello.html', error=error)
+    return render_template('register.html', error=error)
 
 #로그인 요구하는 환경 만드는 메뉴

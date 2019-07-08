@@ -15,7 +15,7 @@ def index():
 
 @app.route('/set')
 def set():
-    resp = make_response(render_template('hello.html'))
+    resp = make_response(render_template('register.html'))
     resp.set_cookie('username', 'the username')
     return resp
 #쿠키 저장하기
