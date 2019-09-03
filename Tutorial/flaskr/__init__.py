@@ -31,7 +31,7 @@ def create_app(test_config=None):
     print("!")
 
     from . import auth
-    app.register_blueprint(auth.bp)
+    app.register_blueprint(auth.bp, url_prefix='/pages')
 
     from . import blog
     app.register_blueprint(blog.bp)

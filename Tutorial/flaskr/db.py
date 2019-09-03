@@ -35,6 +35,7 @@ def init_db_command():
     """Clear the existing data and create new tables."""
     init_db()
     click.echo('Initialized the database.')
+##이것이 아주 중요! db를 command를 통해 만드는 것.
 #터미널에 flask init-db를 하면 순차적으로 db를 생성하게 해줌
 
 
